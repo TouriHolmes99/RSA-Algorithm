@@ -1,13 +1,9 @@
 def isPrime(n):
-  # Corner case
   if (n <= 1):
     return False
-  
-  # Check from 2 to n-1
   for i in range(2, n):
     if (n % i == 0):
       return False
-      
   return True
   
 def modulus(p, q):
@@ -43,7 +39,6 @@ def egcd(a, b):
       Os, s = s, Os - quotient * s
       Ot, t = t, Ot - quotient * t
 
-  # return gcd, x, y
   return Or, Os, Ot
 
 def modularInv(a, b):
